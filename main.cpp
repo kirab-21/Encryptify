@@ -10,15 +10,16 @@ int main(int argc, char *argv[]) {
     std::string directory;
     std::string action;
 
-    std::cout << "Enter directory path: " << std::endl;
+    std::cout << "Enter directory path: ";
     std::getline(std::cin, directory);
 
-    std::cout << "Enter action: " << std::endl;
+    std::cout << "Enter action: ";
     std::getline(std::cin, action);
 
     try {
         if(fs::exists(directory) && fs::is_directory(directory)) {
             ProcessManagement processManagement;
+            
             for(const auto &entry: fs::recursive_directory_iterator(directory)) {
                 if(entry.is_regular_file()) {
                     std::string filePath = entry.path().string();
