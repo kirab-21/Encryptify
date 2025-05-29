@@ -53,6 +53,9 @@
         "algorithm": "cpp",
         "__tree": "cpp",
         "list": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "memory": "cpp",
+        "print": "cpp",
+        "stack": "cpp"
     }
 }
