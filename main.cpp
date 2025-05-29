@@ -34,7 +34,6 @@ int main(int argc, char *argv[]) {
                     }
                 }
             }
-            processManagement.executeTasks();
         } else {
             std::cout << "Invalid directory" << std::endl;
         } 
