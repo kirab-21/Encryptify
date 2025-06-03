@@ -12,6 +12,7 @@ class ProcessManagement{
 
     public:
         ProcessManagement();
+        ~ProcessManagement();
         bool submitToQueue(std::unique_ptr<Task> task);
         void executeTasks();
 
@@ -23,14 +24,16 @@ class ProcessManagement{
             int rear;
 
             void printSharedMemory() {
-                std::cout<< size << std::endl;
+                std::cout<<size<< std::endl;
+                std::cout<<front<<std::endl;
+                std::cout<<rear<< std::endl;
             }
         };
 
         SharedMemory* sharedMem;
-        int  shmFd;
+        int shmFd;
         const char* SHM_NAME="/my_queue";
-        std::mutex queueLock;
+        std::mutex queueLock; 
 };
 
 #endif
